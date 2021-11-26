@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.item {
+    background-color: rgb(241, 98, 186);
+    height: 200px;
+    text-align: center;
+    margin-top: 12px;
+}
+h2 {
+    line-height: 200px;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+}
+
+.content {
+    flex: 1;
+}
+
+@media (max-width: 1023px) {
+    .hide {
+        display: none;
+    }
+}
