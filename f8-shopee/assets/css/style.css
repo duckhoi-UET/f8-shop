@@ -1,3 +1,7 @@
+.app {
+    overflow: hidden;
+}
+
 .header {
     height: var(--header-height);
     background: linear-gradient(0, #fe6433, #f53e2d);
@@ -14,7 +18,7 @@
     margin: 0;
     padding-left: 0;
     border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
     display: none;
 }
 
@@ -51,6 +55,7 @@
 
 .header-sort-item--active .header-sort-link {
     color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .navbar {
@@ -379,6 +384,7 @@
 
 .header-moblie__search {
     padding: 0 12px;
+    display: none;
 }
 
 .header-moblie__search-icon {
@@ -416,6 +422,7 @@
     position: relative;
     width: 150px;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header-cart:hover {
@@ -432,6 +439,7 @@
     position: relative;
     display: inline-block;
     padding: 0 8px;
+    
 }
 
 .notice-cart {
@@ -993,6 +1001,61 @@
 }
 
 /* Home sort filter */
+.mobile-category{
+   display: none;
+}
+
+.mobile-category__list{
+    display: flex;
+    padding-left: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item{
+    list-style: none;
+    flex-shrink: 0;
+    margin: 0 5px;
+}
+
+
+
+.mobile-category__item-link{
+    --light-height: 2rem;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: var(--light-height);
+    height: calc(var(--light-height) * 2);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: center;
+    width: 110px;
+    display: block;
+    border-radius: 4px;
+    font-weight: 300;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0 6px;
+}
+
+.mobile-category__item:nth-of-type(3n + 1) .mobile-category__item-link{
+    background-color: #87AFD8;
+}
+
+.mobile-category__item:nth-of-type(3n + 2) .mobile-category__item-link{
+    background-color: #76C9BD;
+}
+
+.mobile-category__item:nth-of-type(3n + 3) .mobile-category__item-link{
+    background-color: #88CF81;
+}
 
 .home-filter {
     display: flex;
@@ -1249,17 +1312,20 @@
 .home-product__pagination {
     margin-top: 40px;
     margin-bottom: 40px;
+    padding-left: 0;
 }
 
 .footer {
     border-top: 4px solid var(--primary-color);
-    padding-top: 16px;
+    padding: 0 8px;
 }
 
 .footer__header {
     font-size: 1.4rem;
     text-transform: uppercase;
     color: var(--text-color);
+    margin-bottom: 10px;
+    margin-top: 16px;
 }
 
 .footer-list {
